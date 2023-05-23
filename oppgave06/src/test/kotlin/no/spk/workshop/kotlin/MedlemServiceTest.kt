@@ -1,14 +1,12 @@
 package no.spk.workshop.kotlin
 
 import org.junit.jupiter.api.Test
-import org.springframework.beans.factory.annotation.Autowired
 import org.assertj.core.api.Assertions.assertThat
 
 
 internal class MedlemServiceTest {
 
-    @Autowired
-    lateinit var medlemService: MedlemService
+    val medlemService = MedlemService()
 
     @Test
     fun `Kan generere et medlem med Java`() {
