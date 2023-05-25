@@ -22,7 +22,7 @@
     </properties>
 
     <modules>
-        <module>oppgave1</module>
+        <module>oppgave-01-a</module>
         <module>oppgave06</module>
     </modules>
 
