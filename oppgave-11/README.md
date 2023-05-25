@@ -23,3 +23,6 @@ følgende:
 
 De tre første testene gir deg litt hjelp til å komme i gang, men de to siste må
 du skrive fra scratch. :-)
+
+Hint: Du kan bruke `every { ... } returnsMany listOf(...)` for å få mocken til å svare forskjellig i påfølgende kall.
+Hint: Du kan bruke `verify(exactly = 1) { ... }` for å sjekke antall kall til mocken.
