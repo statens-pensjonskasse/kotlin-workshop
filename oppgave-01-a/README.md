@@ -1,4 +1,4 @@
-# Oppgave 1
+# Oppgave 1A
 
 Denne modulen har en Kotlin-test som egentlig feiler, men siden Maven-
 konfigurasjonen er feil, bygges aldri Kotlin-koden, og bygget kjører derfor
