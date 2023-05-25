@@ -6,6 +6,6 @@ class MedlemService {
     }
 
     fun genererKotlinMedlem(navn: String): Medlem {
-        TODO()
+        return Medlem(navn, true)
     }
 }
