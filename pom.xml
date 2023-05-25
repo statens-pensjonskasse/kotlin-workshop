@@ -23,7 +23,8 @@
 
     <modules>
         <module>oppgave1</module>
-        <module>oppgave06</module>
+        <module>oppgave-06</module>
+        <module>oppgave-07</module>
     </modules>
 
     <dependencyManagement>
