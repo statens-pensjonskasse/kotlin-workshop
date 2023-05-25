@@ -1,7 +1,9 @@
 # Oppgave 3
 
-Denne modulen har flere tester som mangler kode. Du skal skrive koden for de
-manglende lambdaene i testen, slik at testene kjører grønt, uten å gjøre
-endringer i assertions (`shouldBe`).
+I denne oppgaven har du en Java-klasse `LegacyGreetingProvider` som
+implementerer et interface og setter sammen en hilsen med et navn.
 
-Hint for test 4: En lambda kan returnere en annen lambda.
+1. Skriv en tilsvarende implementasjon i `KotlinGreetingProvider`, slik at
+   den ferdig skrevne testen blir grønn.
+
+Tips: Kan `greeting`-metoden forenkles til én linje uten bruk av krøllparentes?
