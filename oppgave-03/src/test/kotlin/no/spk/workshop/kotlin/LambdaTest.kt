@@ -10,7 +10,7 @@ internal class LambdaTest {
     fun `Test 1, Lambda som produserer en hilsen for forskjellige navn`() {
 
         // skriv din lambda her:
-        val helloGreeting = ...
+        val helloGreeting = { name: String -> "Hello, $name!" }
 
         helloGreeting("World") shouldBe "Hello, World!"
         helloGreeting("Kotlin") shouldBe "Hello, Kotlin!"
@@ -20,7 +20,7 @@ internal class LambdaTest {
     fun `Test 2, Lambda som summerer to tall`() {
 
         // skriv din lambda her:
-        val sum = ...
+        val sum = { a: Int, b: Int -> a + b }
 
         sum(2, 3) shouldBe 5
         sum(10, 5) shouldBe 15
@@ -29,10 +29,10 @@ internal class LambdaTest {
     val n = 5
 
     @Test
-    fun `Test 3, Lambda som bruker variabelen over denne testen (closure)`() {
+    fun `Test 3, Lambda som bruker variabelen over (closure)`() {
 
         // skriv din lambda her:
-        val sum = ...
+        val sum = { a: Int -> a + n }
 
         sum(2) shouldBe 7
         sum(10) shouldBe 15
@@ -42,7 +42,7 @@ internal class LambdaTest {
     fun `Test 4, Lambda som produserer en annen lambda, som multipliserer to tall`() {
 
         // skriv din lambda her:
-        val times = ...
+        val times = { a: Int -> { b: Int -> a * b } }
 
         val doubleIt = times(2)
         doubleIt(3) shouldBe 6
@@ -57,8 +57,8 @@ internal class LambdaTest {
     fun `Test 5, Lambda som multipliserer et tall med én høyere enn et annet tall`() {
 
         // skriv din lambda her:
-        val incrementByOne = ...
-        val times = ...
+        val incrementByOne = { n: Int -> n + 1 }
+        val times = { a: Int, inc: (Int) -> Int -> { b: Int -> a * inc(b) } }
 
         val doubleIt = times(2, incrementByOne)
         doubleIt(3) shouldBe 8
