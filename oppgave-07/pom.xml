@@ -10,7 +10,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>oppgave07</artifactId>
+    <artifactId>oppgave-07</artifactId>
 
     <dependencies>
         <dependency>
