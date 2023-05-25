@@ -4,13 +4,12 @@ import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 
 
-internal class LambdaTest {
+internal class LambdasTest {
 
     @Test
     fun `Test 1, Lambda som produserer en hilsen for forskjellige navn`() {
 
-        // skriv din lambda her:
-        val helloGreeting = ...
+        val helloGreeting = Lambdas.helloGreeting()
 
         helloGreeting("World") shouldBe "Hello, World!"
         helloGreeting("Kotlin") shouldBe "Hello, Kotlin!"
@@ -19,8 +18,7 @@ internal class LambdaTest {
     @Test
     fun `Test 2, Lambda som summerer to tall`() {
 
-        // skriv din lambda her:
-        val sum = ...
+        val sum = Lambdas.sum()
 
         sum(2, 3) shouldBe 5
         sum(10, 5) shouldBe 15
@@ -29,10 +27,9 @@ internal class LambdaTest {
     val n = 5
 
     @Test
-    fun `Test 3, Lambda som bruker variabelen over denne testen (closure)`() {
+    fun `Test 3, Lambda som bruker variabelen i scopet utenfor (closure)`() {
 
-        // skriv din lambda her:
-        val sum = ...
+        val sum = Lambdas.sumWithN()
 
         sum(2) shouldBe 7
         sum(10) shouldBe 15
@@ -41,8 +38,7 @@ internal class LambdaTest {
     @Test
     fun `Test 4, Lambda som produserer en annen lambda, som multipliserer to tall`() {
 
-        // skriv din lambda her:
-        val times = ...
+        val times = Lambdas.times()
 
         val doubleIt = times(2)
         doubleIt(3) shouldBe 6
@@ -56,9 +52,8 @@ internal class LambdaTest {
     @Test
     fun `Test 5, Lambda som multipliserer et tall med én høyere enn et annet tall`() {
 
-        // skriv din lambda her:
-        val incrementByOne = ...
-        val times = ...
+        val incrementByOne = { n: Int -> n + 1 }
+        val times = Lambdas.timesWithIncrement()
 
         val doubleIt = times(2, incrementByOne)
         doubleIt(3) shouldBe 8
