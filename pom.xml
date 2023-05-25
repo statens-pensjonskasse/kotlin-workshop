@@ -22,9 +22,8 @@
     </properties>
 
     <modules>
-        <module>oppgave1</module>
-        <module>oppgave-06</module>
-        <module>oppgave-07</module>
+        <module>oppgave-01-a</module>
+        <module>oppgave06</module>
     </modules>
 
     <dependencyManagement>
