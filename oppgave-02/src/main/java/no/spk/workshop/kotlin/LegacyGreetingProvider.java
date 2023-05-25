@@ -1,9 +1,15 @@
 package no.spk.workshop.kotlin;
 
-public class LegacyGreetingProvider {
+public class LegacyGreetingProvider implements GreetingProvider {
 
+    private final String name;
+
+    LegacyGreetingProvider(final String name) {
+        this.name = name;
+    }
+
+    @Override
     public String greeting() {
-        final String name = new NameProvider().name();
-        return "Hello, " + name + "!";
+        return String.format("Hello, %s!", name);
     }
 }
