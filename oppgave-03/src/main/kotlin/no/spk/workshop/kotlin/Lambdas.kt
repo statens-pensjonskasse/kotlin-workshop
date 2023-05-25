@@ -4,24 +4,24 @@ package no.spk.workshop.kotlin
 object Lambdas {
 
     fun helloGreeting(): (String) -> String {
-        TODO("Skriv din lambda her")
+        return { name: String -> "Hello, $name!" }
     }
 
     fun sum(): (Int, Int) -> Int {
-        TODO("Skriv din lambda her")
+        return { a: Int, b: Int -> a + b }
     }
 
     private final val n = 5
 
     fun sumWithN(): (Int) -> Int {
-        TODO("Skriv din lambda her")
+        return { a: Int -> a + n }
     }
 
     fun times(): (Int) -> (Int) -> Int {
-        TODO("Skriv din lambda her")
+        return { a: Int -> { b: Int -> a * b } }
     }
 
     fun timesWithIncrement(): (Int, (Int) -> Int) -> (Int) -> Int {
-        TODO("Skriv din lambda her")
+        return { a: Int, inc: (Int) -> Int -> { b: Int -> a * inc(b) } }
     }
 }
