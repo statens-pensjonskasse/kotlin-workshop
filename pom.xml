@@ -22,10 +22,10 @@
     </properties>
 
     <modules>
-        <module>oppgave-01-a</module>
-        <module>oppgave-01-b</module>
+        <module>oppgave-01</module>
         <module>oppgave-02</module>
         <module>oppgave-03</module>
+        <module>oppgave-04</module>
         <module>oppgave-05</module>
         <module>oppgave-06</module>
         <module>oppgave-07</module>
