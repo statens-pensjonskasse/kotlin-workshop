@@ -30,6 +30,7 @@
         <module>oppgave-07</module>
         <module>oppgave-08</module>
         <module>oppgave-10</module>
+        <module>oppgave-11</module>
     </modules>
 
     <dependencyManagement>
