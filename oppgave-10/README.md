@@ -1,4 +1,4 @@
-# Oppgave 4
+# Oppgave 10
 
 Denne modulen har en klasse som regner ut svaret på Livet, Universet, og Alt,
 men dette tar fryktelig lang tid, og testen som henter svaret feiler fordi
