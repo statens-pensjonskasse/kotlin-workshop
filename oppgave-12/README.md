@@ -1,27 +1,28 @@
 # Oppgave 12
 
-Denne modulen er inspirert fra en problemstilling i Team Brev og Arkiv, hvor vi
-hadde behov for å mappe mellom to adressetyper.
+I denne modulen skal du skrive tester.
 
-Det vi skal mappe fra, er en sterkt typet dataklasse, med felter for navn,
-poststed, land, osv. Dette kan ligne på adressen vi får fra personalia-tjenesten
-i SPK, hvis du er kjent med den.
+Denne modulen har en `CharacterClient` som henter karakterer fra forskjellige
+tegneserieunivers, og en cachende variant av denne.
 
-Det vi skal mappe til, er flettefelter i et brev, hvor adressen skal legges inn
-sammen med det som ligger der fra før. Flettefeltene er en key/value-struktur,
-eller en `map<String, Any?>` i Kotlin. `Any?` fordi flettefelter kan nestes og
-være `null`.
+`CachingCharacterClient` bruker en annen `CharacterClient` som kilde for sine
+data, og oppdaterer cachen sin herfra hvert femte sekund. Du skal IKKE skrive en
+implementasjon av dette interfacet, men den skal i stedet mockes ut i testene
+dine. Du kan se for deg at det typisk ville vært en HTTP-klient som gjorde
+faktiske kall mot en webservice eller lignende.
 
-Utfordringen er at dataklassen vi skal mappe fra og flettefeltene vi skal mappe
-til har ulikt antall adresselinjer tilgjengelig. Flettefeltene har maksimalt fem
-adresselinjer til disposisjon. Felter som ikke får plass, skal derfor kombineres
-med komma. Postnr og -sted skal kombineres til ett felt.
+Din oppgave er å sørge for at `CachingCharacterClient` oppfører seg som
+forventet ved å skrive test-cases som bruker MockK og Kotest til å verifisere
+følgende:
 
-I koden finner du en test som bruker dynamiske/parametriserte tester fra JUnit 5
-til å dekke en hel rekke forskjellige kombinasjoner av adresser. Testen feiler.
+1. At cachen faktisk svarer med verdien fra kilden.
+2. At cachen returnerer `null` dersom det ikke finnes noen tegneseriefigurer i kilden.
+3. At riktig tegneseriefigur returneres for riktig univers.
+4. At cachen ikke oppdateres før det har gått fem sekunder (selv om kilden endrer seg).
+5. At cachen oppdateres etter fem sekunder (når kilden har endret seg).
 
-Skriv en god implementasjon i Kotlin som gjør at testene blir grønne. Du skal
-ikke gjøre endringer i testene. :-)
+De tre første testene gir deg litt hjelp til å komme i gang, men de to siste må
+du skrive fra scratch. :-)
 
-Hint: Det kan være ukjente flettefelt som ikke skal endres på.
-Hint 2: Tomme flettefelt er tom string, og ikke `null`.
+Hint: Du kan bruke `every { ... } returnsMany listOf(...)` for å få mocken til å svare forskjellig i påfølgende kall.
+Hint: Du kan bruke `verify(exactly = 1) { ... }` for å sjekke antall kall til mocken.
