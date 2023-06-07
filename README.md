@@ -17,3 +17,4 @@ går vi gjennom oppgavene sammen.
 * [Oppgave 9](./oppgave-09/README.md)
 * [Oppgave 10](./oppgave-10/README.md)
 * [Oppgave 11](./oppgave-11/README.md)
+* [Oppgave 12](./oppgave-12/README.md)
