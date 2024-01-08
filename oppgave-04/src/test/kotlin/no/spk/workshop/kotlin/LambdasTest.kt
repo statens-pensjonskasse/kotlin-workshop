@@ -48,19 +48,4 @@ internal class LambdasTest {
         tripleIt(3) shouldBe 9
         tripleIt(5) shouldBe 15
     }
-
-    @Test
-    fun `Test 5, Lambda som multipliserer et tall med én høyere enn et annet tall`() {
-
-        val incrementByOne = { n: Int -> n + 1 }
-        val times = Lambdas.timesWithIncrement()
-
-        val doubleIt = times(2, incrementByOne)
-        doubleIt(3) shouldBe 8
-        doubleIt(5) shouldBe 12
-
-        val tripleIt = times(3, incrementByOne)
-        tripleIt(3) shouldBe 12
-        tripleIt(5) shouldBe 18
-    }
 }

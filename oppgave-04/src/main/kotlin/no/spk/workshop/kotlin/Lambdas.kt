@@ -20,8 +20,4 @@ object Lambdas {
     fun times(): (Int) -> (Int) -> Int {
         TODO("Skriv din lambda her")
     }
-
-    fun timesWithIncrement(): (Int, (Int) -> Int) -> (Int) -> Int {
-        TODO("Skriv din lambda her")
-    }
 }
