@@ -21,7 +21,7 @@ maven-compiler-plugin ikke finner Kotlin-klassen `NameProvider` på classpath.
 
 2. Gjør flere endringer slik at bygget blir grønt.
 
-Hint: Kompileres Java- og Kotlin-filene i riktig rekkefølge? (Kotlin må bygges sist.)
+Hint: Kompileres Java- og Kotlin-filene i riktig rekkefølge? (Kotlin må bygges først.)
 
 Oppgaven er løst når modulen bygger.
 
