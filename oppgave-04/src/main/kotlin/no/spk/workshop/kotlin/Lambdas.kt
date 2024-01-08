@@ -20,8 +20,4 @@ object Lambdas {
     fun times(): (Int) -> (Int) -> Int {
         return { a: Int -> { b: Int -> a * b } }
     }
-
-    fun timesWithIncrement(): (Int, (Int) -> Int) -> (Int) -> Int {
-        return { a: Int, inc: (Int) -> Int -> { b: Int -> a * inc(b) } }
-    }
 }
