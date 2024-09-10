@@ -34,6 +34,7 @@
         <module>oppgave-10</module>
         <module>oppgave-11</module>
         <module>oppgave-12</module>
+        <module>oppgave-13</module>
     </modules>
 
     <dependencyManagement>
