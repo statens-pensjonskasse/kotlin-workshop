@@ -18,3 +18,4 @@ går vi gjennom oppgavene sammen.
 * [Oppgave 10](./oppgave-10/README.md)
 * [Oppgave 11](./oppgave-11/README.md)
 * [Oppgave 12](./oppgave-12/README.md)
+* [Oppgave 13](./oppgave-13/README.md)
