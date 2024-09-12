@@ -6,16 +6,15 @@ class PrimtallService {
 
     fun kalkulerPrimtall(max: Int): List<Int> {
         val maxFaktor = sqrt(max.toFloat()).toInt() // Noe større enn roten vil måtte ganges med en faktor mindre enn roten
-        val muligePrimtall = lagListeFra2TilOgMed(max)
+        val muligePrimtall = lagSekvensFra2TilOgMed(max)
         return filtrerVekkDelbareRekursivt(muligePrimtall, 2, maxFaktor)
     }
 
-    private fun lagListeFra2TilOgMed(max: Int): List<Int> {
-        val startArray = IntArray(max+1)
-        startArray.forEachIndexed { index, _ ->
-            startArray[index] = index
-        }
-        return startArray.toList().minus(0).minus(1)
+    private fun lagSekvensFra2TilOgMed(max: Int): List<Int> {
+        if (max < 2) return emptyList()
+        return generateSequence(2) { it + 1 }
+            .take( max - 1 )
+            .toList()
     }
 
     private fun filtrerVekkDelbareRekursivt(muligePrimtall: List<Int>, iterasjonFaktor: Int, maxFaktor: Int): List<Int> {
